@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Match, strategize, and rise through the ranks in Tiles 2D: Match 3 Club. The ultimate tile-matching puzzle experience."
+    />
+    <meta
+      name="keywords"
+      content="Tiles 2D, match 3, puzzle game, tile matching, match 3 club, brain game, offline puzzle"
+    />
+    <meta name="author" content="SKL Games" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fantasytiles.site" />
+
+    <title>Tiles 2D: Match 3 Club</title>
+    <link rel="icon" href="img/Fav b.jpg" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <div id="cookie-popup" class="e-g-cookie-popup">
+      <div class="e-g-cookie-popup-container">
+        <p class="e-g-cookie-popup-text-two">
+          Our website use cookies. By continuing, we assume your permission to
+          deploy cookies as detailed in our Privacy Policy.
+        </p>
+        <div class="e-g-cookie-button-container">
+          <button id="decline-cookies" class="e-g-cookie-button">
+            Decline
+          </button>
+          <button id="accept-cookies" class="e-g-cookie-button">
+            Accept cookies
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="e-g-header">
+      <div class="e-g-header-background"></div>
+      <nav class="e-g-navigation">
+        <ul class="e-g-navigation-list">
+          <li class="e-g-navigation-item">
+            <a href="/" class="e-g-navigation-link">Welcome to the Club</a>
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#about" class="e-g-navigation-link"
+              >The Origins of the Quest</a
+            >
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#why" class="e-g-navigation-link">Master the Match</a>
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#uniqueness" class="e-g-navigation-link"
+              >The Clubhouse Wall</a
+            >
+          </li>
+
+          <li class="e-g-navigation-item">
+            <a href="/#how" class="e-g-navigation-link"
+              >The Puzzle Designer's Notebook</a
+            >
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#features" class="e-g-navigation-link"
+              >Features That Define Us</a
+            >
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#gallery" class="e-g-navigation-link">Gallery</a>
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#reviews" class="e-g-navigation-link"
+              >Club Testimonials</a
+            >
+          </li>
+          <li class="e-g-navigation-item">
+            <a href="/#characters" class="e-g-navigation-link"
+              >Weekly Challenge Room</a
+            >
+          </li>
+
+          <li class="e-g-navigation-item">
+            <a href="/#faq" class="e-g-navigation-link">Meet the Makers</a>
+          </li>
+
+          <li class="e-g-navigation-item">
+            <a
+              href="/policy.html"
+              class="e-g-navigation-link e-g-navigation-item-desk"
+            >
+              Privacy Policy
+            </a>
+          </li>
+          <li class="e-g-navigation-item">
+            <a
+              href="/terms.html"
+              class="e-g-navigation-link e-g-navigation-item-desk"
+            >
+              Terms and Conditions
+            </a>
+          </li>
+          <li class="e-g-navigation-item">
+            <a
+              href="/cookies.html"
+              class="e-g-navigation-link e-g-navigation-item-desk"
+            >
+              Cookies Policy
+            </a>
+          </li>
+        </ul>
+
+        <div class="e-g-header-button-wrapper">
+          <a href="/" class="e-g-policy-terms-header-icon-menu">
+            <img href="/" class="e-g-title-img" />
+          </a>
+
+          <button
+            type="button"
+            class="e-g-header-icon-button"
+            data-menu-button
+          >
+            <img
+              class="e-g-header-icon e-g-header-icon-menu"
+              src="img/menu.png"
+              style="width: 28px; height: 28px"
+              alt="menu "
+            />
+
+            <svg
+              class="e-g-header-icon e-g-header-icon-close"
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_20_7389)">
+                <g clip-path="url(#clip1_20_7389)">
+                  <path
+                    d="M4.5591 4.55909C4.9172 4.2011 5.40282 3.99999 5.90917 3.99999C6.41553 3.99999 6.90115 4.2011 7.25925 4.55909L14.0115 11.3114L20.7638 4.55909C21.124 4.21124 21.6063 4.01877 22.107 4.02312C22.6077 4.02747 23.0866 4.2283 23.4407 4.58235C23.7947 4.9364 23.9956 5.41535 23.9999 5.91603C24.0043 6.41672 23.8118 6.89909 23.464 7.25924L16.7117 14.0115L23.464 20.7638C23.8118 21.124 24.0043 21.6063 23.9999 22.107C23.9956 22.6077 23.7947 23.0866 23.4407 23.4407C23.0866 23.7947 22.6077 23.9956 22.107 23.9999C21.6063 24.0043 21.124 23.8118 20.7638 23.4639L14.0115 16.7117L7.25925 23.4639C6.8991 23.8118 6.41673 24.0043 5.91605 23.9999C5.41536 23.9956 4.93641 23.7947 4.58236 23.4407C4.22831 23.0866 4.02748 22.6077 4.02313 22.107C4.01878 21.6063 4.21125 21.124 4.5591 20.7638L11.3114 14.0115L4.5591 7.25924C4.20111 6.90114 4 6.41551 4 5.90916C4 5.40281 4.20111 4.91719 4.5591 4.55909Z"
+                    fill="white"
+                  />
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip0_20_7389">
+                  <rect width="28" height="28" fill="white" />
+                </clipPath>
+                <clipPath id="clip1_20_7389">
+                  <rect width="28" height="28" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="e-g-home" id="home">
+        <div class="e-g-home-container">
+          <div class="e-g-home-container-top">
+            <img class="e-g-home-title" src="/img/home/1.png" alt="title" />
+
+            <ul class="e-g-home-text">
+              <li>
+                When our team of puzzle designers met on a rainy Thursday in a
+                retro board game café, we started sketching tile arrangements on
+                napkins. By the end of that evening, we had the first prototype
+                of what would become Tiles 2D: Match 3 Club — a game that
+                celebrates logic, timing, and the thrill of mastering the board.
+              </li>
+              <li>
+                Join a world where tiles aren't just pieces—they're challenges
+                waiting to be conquered. Swipe, match, and strategize your way
+                to the top of the club leaderboard.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="e-g-about" id="about">
+        <div class="e-g-about-container">
+          <h2 class="e-g-about-title">The Origins of the Quest</h2>
+          <p class="e-g-about-text">
+            The Club wasn't always this big. <br />
+            At first, it was just a tiny tournament hidden in the corner of an
+            arcade. But when challengers started rising through the ranks with
+            brilliant strategies, something changed. The game evolved. The tiles
+            began to shift, react, adapt. <br />
+            Now it's your turn. Accept the quest, enter the match arena, and
+            become part of the story that's still being written—one perfect
+            combo at a time.
+          </p>
+          <figure class="e-g-about-img">
+            <img class="e-g-about-img" src="/img/Subtract.png" />
+          </figure>
+        </div>
+      </section>
+      <article class="e-g-why" id="why">
+        <span style="display: none"
+          >Generated: 2025-05-17, Hash: e-g-qk-e-g-39fd7x</span
+        >
+
+        <div class="e-g-why-container">
+          <h2 class="e-g-about-title e-g-about-title-two">
+            Master the Match
+          </h2>
+          <dl class="e-g-why-list">
+            <div class="e-g-why-item">
+              <figure class="e-g-why-img">
+                <img class="e-g-why-img" src="img/why/Group 39785.png" />
+              </figure>
+              <div>
+                <dt class="e-g-why-text-bold">Triple Twist Match System</dt>
+                <dd class="e-g-why-text">
+                  You're not just lining up three of a kind. Think diagonals,
+                  T-shapes, and unique combo chains.
+                </dd>
+              </div>
+            </div>
+            <div class="e-g-why-item">
+              <figure class="e-g-why-img">
+                <img class="e-g-why-img" src="img/why/Group 39784.png" />
+              </figure>
+              <div>
+                <dt class="e-g-why-text-bold">Combo Chain Reactions</dt>
+                <dd class="e-g-why-text">
+                  Stack your moves, watch them trigger cascading reactions, and
+                  score mega points.
+                </dd>
+              </div>
+            </div>
+            <div class="e-g-why-item">
+              <figure class="e-g-why-img">
+                <img class="e-g-why-img" src="img/why/Group 39786.png" />
+              </figure>
+              <div>
+                <dt class="e-g-why-text-bold">Strategic Movement Limits</dt>
+                <dd class="e-g-why-text">
+                  Every move matters. No lazy matches here. Plan three steps
+                  ahead or face a blocked board.
+                </dd>
+              </div>
+            </div>
+            <div class="e-g-why-item">
+              <figure class="e-g-why-img">
+                <img class="e-g-why-img" src="img/why/Group 39787.png" />
+              </figure>
+              <div>
+                <dt class="e-g-why-text-bold">Progressive Difficulty</dt>
+                <dd class="e-g-why-text">
+                  From zen-like beginner rounds to ultra-hard timed showdowns.
+                </dd>
+              </div>
+            </div>
+          </dl>
+        </div>
+      </article>
+      <section class="e-g-uniqueness" id="uniqueness">
+        <div class="e-g-uniqueness-container">
+          <h2 class="e-g-about-title">The Clubhouse Wall</h2>
+          <p class="e-g-uniqueness-text-bold">
+            Challenge others. Win your place.
+          </p>
+          <div class="e-g-uniqueness-list">
+            <div class="e-g-uniqueness-item">
+              Global leaderboard resets every week
+            </div>
+            <div class="e-g-uniqueness-item">
+              Club-only weekly mini-tournaments
+            </div>
+            <div class="e-g-uniqueness-item">
+              Friend duels & private lobbies
+            </div>
+            <div class="e-g-uniqueness-item">
+              Earn ranks: Novice → Strategist → Master → Grand Tiler
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="e-g-how" id="how">
+        <div class="e-g-how-container">
+          <h2 class="e-g-about-title e-g-about-title-two">
+            The Puzzle Designer's Notebook
+          </h2>
+          <ul class="e-g-how-text">
+            <li>
+              Handwritten notes, sketches of tile mechanics, scrapped mechanics
+              like "ghost tiles" and "mirror rounds."
+            </li>
+            <li>
+              Behind every great level is a designer trying to break your brain
+              (in the best way). This block includes:
+            </li>
+          </ul>
+          <ul class="e-g-how-list">
+            <li class="e-g-how-item">Screenshots of level prototypes</li>
+            <li class="e-g-how-item">Quotes from playtesters</li>
+            <li class="e-g-how-item">
+              A short note from the lead developer about why timing is more
+              important than luck
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="e-g-features" id="features">
+        <div class="e-g-features-container">
+          <h2 class="e-g-about-title">Features That Define Us</h2>
+
+          <div class="e-g-features-list">
+            <div class="e-g-features-item">
+              <div class="e-g-features-item-two">
+                500+ handcrafted levels with daily new challenges
+              </div>
+              <div class="e-g-features-item-two">
+                Offline play for commutes and no-WiFi scenarios
+              </div>
+              <div class="e-g-features-item-two">
+                No lives. No pressure. Pure progression
+              </div>
+            </div>
+            <div class="e-g-features-item">
+              <div class="e-g-features-item-two">
+                Stunning flat-style retro visuals
+              </div>
+              <div class="e-g-features-item-two">
+                Original lo-fi synth soundtrack
+              </div>
+              <div class="e-g-features-item-two">
+                Minimalist UI for maximum clarity
+              </div>
+            </div>
+          </div>
+          <div class="e-g-features-lists">
+            <div class="e-g-features-item">
+              <div class="e-g-features-item-two">
+                500+ handcrafted levels with daily new challenges
+              </div>
+              <div class="e-g-features-item-two">
+                Offline play for commutes and no-WiFi scenarios
+              </div>
+              <div class="e-g-features-item-two">
+                No lives. No pressure. Pure progression
+              </div>
+            </div>
+            <div class="e-g-features-item">
+              <div class="e-g-features-item-two">
+                Stunning flat-style retro visuals
+              </div>
+              <div class="e-g-features-item-two">
+                Original lo-fi synth soundtrack
+              </div>
+              <div class="e-g-features-item-two">
+                Minimalist UI for maximum clarity
+              </div>
+            </div>
+          </div>
+          <div
+            class="e-g-gallery-button-container e-g-gallery-button-container-two"
+          >
+            <button class="e-g-gallery-button e-g-features-list-left">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (1).png"
+                alt="left button"
+              />
+            </button>
+            <button class="e-g-gallery-button e-g-features-list-right">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (2).png"
+                alt="right button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="e-g-gallery" id="gallery">
+        <div class="e-g-gallery-container">
+          <h2 class="e-g-about-title">Gallery</h2>
+
+          <ul class="e-g-gallery-list">
+            <li class="e-g-gallery-item">
+              <img
+                class="e-g-gallery-image"
+                src="./img/gallery/screen-0 (2) 1.png"
+                alt="gallery image"
+              />
+            </li>
+            <li class="e-g-gallery-item">
+              <img
+                class="e-g-gallery-image"
+                src="./img/gallery/unnamed - 2025-04-29T133658.298.png"
+                alt="gallery image"
+              />
+            </li>
+            <li class="e-g-gallery-item">
+              <img
+                class="e-g-gallery-image"
+                src="./img/gallery/unnamed - 2025-04-29T133654.987.png"
+                alt="gallery image"
+              />
+            </li>
+            <li class="e-g-gallery-item">
+              <img
+                class="e-g-gallery-image"
+                src="./img/gallery/unnamed - 2025-04-29T133651.145.png"
+                alt="gallery image"
+              />
+            </li>
+          </ul>
+          <div
+            class="e-g-gallery-button-container e-g-gallery-button-container-two"
+          >
+            <button class="e-g-gallery-button e-g-gallery-list-left">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (1).png"
+                alt="left button"
+              />
+            </button>
+            <button class="e-g-gallery-button e-g-gallery-list-right">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (2).png"
+                alt="right button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="e-g-reviews" id="reviews">
+        <div class="e-g-reviews-container">
+          <h2 class="e-g-about-title e-g-about-title-two">
+            Club Testimonials
+          </h2>
+          <ul class="e-g-reviews-list">
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (1).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">@PatternBreaker95</p>
+                  <p class="e-g-reviews-text">
+                    "At level 94 now and I've hit that sweet spot of rage and
+                    brilliance. When you line up a six-chain combo... chef's
+                    kiss."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (1).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (2).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">Camille Z.</p>
+                  <p class="e-g-reviews-text">
+                    "Feels like chess with colors. I've played for hours without
+                    realizing. And thank you for the offline mode!"
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (2).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (3).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">TileTactician</p>
+                  <p class="e-g-reviews-text">
+                    "I thought this would be just another clone. It's not. The
+                    triple system is deeply satisfying and the challenge scales
+                    beautifully."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (1).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (4).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">Juno.M</p>
+                  <p class="e-g-reviews-text">
+                    "Love the 'no lives' concept. I fail, I try again. Pure
+                    logic, no paywalls. Just what I want."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (2).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (5).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">@LoFiMatch</p>
+                  <p class="e-g-reviews-text">
+                    "The soundtrack is what kept me calm through level 128.
+                    Seriously, I want it on Spotify."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (2).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (6).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">Kurt_Devlin</p>
+                  <p class="e-g-reviews-text">
+                    "Wish there was a harder mode. Oh wait, there is. I unlocked
+                    it. I regret everything (but also not)."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (1).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (7).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">PlayerOneForever</p>
+                  <p class="e-g-reviews-text">
+                    "The fact that it remembers exactly where I was, even after
+                    force closing? Respect. Solid polish."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (2).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="e-g-reviews-item">
+                <img
+                  class="e-g-reviews-img"
+                  src="/img/reviews/Rectangle 12 (8).png"
+                  alt="avatar"
+                />
+                <div>
+                  <p class="e-g-reviews-text-bold">HazelReigns</p>
+                  <p class="e-g-reviews-text">
+                    "I've played other tile games. This one's smarter. More
+                    ruthless. And somehow more fair. I'm hooked."
+                  </p>
+                  <img
+                    class="e-g-reviews-image"
+                    src="/img/reviews/Frame 39 (1).png"
+                    alt="stars"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="e-g-gallery-button-container">
+            <button class="e-g-gallery-button e-g-reviews-list-left">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (1).png"
+                alt="left button"
+              />
+            </button>
+            <button class="e-g-gallery-button e-g-reviews-list-right">
+              <img
+                class="e-g-gallery-button-icon"
+                src="img/button (2).png"
+                alt="right button"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="e-g-characters" id="characters">
+        <div class="e-g-characters-container">
+          <h2 class="e-g-about-title e-g-about-title-two">
+            Weekly Challenge Room
+          </h2>
+          <ul class="e-g-characters-list">
+            <li class="e-g-characters-item">
+              Every week, a new layout. A new theme. One board. Infinite ways to
+              beat it. <br />Players have 3 chances. No retries.
+            </li>
+            <li>
+              Post your final score. Top 10 win exclusive profile badges and
+              game currency. <br />Themes so far:
+            </li>
+          </ul>
+
+          <ul class="e-g-characters-text">
+            <li class="e-g-characters-texts">
+              Neon Night Tiles
+              <img src="/img/_Group_.png" alt="star" />
+            </li>
+            <li class="e-g-characters-texts">
+              <img src="/img/_Group_.png" alt="star" />Ancient Puzzle Script
+            </li>
+            <li class="e-g-characters-texts">
+              Digital Fog Board
+              <img src="/img/_Group_.png" alt="star" />
+            </li>
+            <li class="e-g-characters-texts">
+              <img src="/img/_Group_.png" alt="star" />Frozen Cascade
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="e-g-faq" id="faq">
+        <div class="e-g-faq-container">
+          <h2 class="e-g-about-title">Meet the Makers</h2>
+          <ul class="e-g-faq-list">
+            <li class="e-g-faq-item">
+              We are a tiny crew of indie devs, tile-lovers, and caffeine
+              addicts who believe puzzles should be fair, fun, and forever
+              replayable.
+            </li>
+            <li>
+              Tiles 2D: Match 3 Club is our ode to classic match-3, inspired by
+              the elegance of Sudoku, the rush of Tetris, and the aesthetic of
+              '80s arcades.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="e-g-footer"
+      style="margin: auto; background: rgba(26, 91, 206, 1)"
+    >
+      <div class="e-g-footer-container">
+        <p class="e-g-footer-copyright">
+          ©2025 fantasytiles.site, All rights reserved
+        </p>
+        <div class="e-g-footer-wrapper">
+          <a class="e-g-footer-text" href="/policy.html">Privacy Policy</a>
+          <a class="e-g-footer-text" href="/terms.html"
+            >Terms and Conditions
+          </a>
+          <a class="e-g-footer-text" href="/cookies.html">Cookies</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/jquery-loc-e-g-0.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/slick.js"></script>
+  </body>
+</html>
